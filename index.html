@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <!-- Simplebar -->
+    <link type="text/css" href="assets/vendor/simplebar.min.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/vendor-material-icons.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-material-icons.rtl.css" rel="stylesheet">
+
+    <!-- Font Awesome FREE Icons -->
+    <link type="text/css" href="assets/css/vendor-fontawesome-free.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-fontawesome-free.rtl.css" rel="stylesheet">
+
+
+    <link type="text/css" href="css/toastr.css" rel="stylesheet">
+
+
+
+
+
+</head>
+
+<body class="layout-login-centered-boxed">
+
+
+
+
+
+    <div class="layout-login-centered-boxed__form card">
+        <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-5 navbar-light">
+            <a href="index.html" class="navbar-brand flex-column mb-2 align-items-center mr-0" style="min-width: 0">
+                <img class="navbar-brand-icon mr-0 mb-2" src="assets/images/stack-logo-blue.svg" width="25" alt="Stack">
+                <span>Epimeno</span>
+            </a>
+            <p class="m-0">Login to access your Account </p>
+        </div>
+
+
+
+        <a href="" class="btn btn-light btn-block">
+            <span class="fab fa-google mr-2"></span> Continue with Google
+        </a>
+
+        <div class="page-separator">
+            <div class="page-separator__text">or</div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="text-label" for="email_2">Email Address:</label>
+            <div class="input-group input-group-merge">
+                <input id="email" type="email" required="" class="form-control form-control-prepended" placeholder="john@doe.com">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span class="far fa-envelope"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="text-label" for="password_2">Password:</label>
+            <div class="input-group input-group-merge">
+                <input id="password" type="password" required="" class="form-control form-control-prepended" placeholder="Enter your password">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <span class="fa fa-key"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id='login' class="btn btn-block btn-primary" type="submit">Login</button>
+        </div>
+        <div class="form-group text-center">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" checked="" id="remember">
+                <label class="custom-control-label" for="remember">Remember me for 30 days</label>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Forgot password?</a> <br> Don't have an account? <a class="text-body text-underline" href="signup-centered-boxed.html">Sign up!</a>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Simplebar -->
+    <script src="assets/vendor/simplebar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- App -->
+    <script src="assets/js/toggle-check-all.js"></script>
+    <script src="assets/js/check-selected-row.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/sidebar-mini.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+            // Self Initialize DOM Factory Components
+            domFactory.handler.autoInit()
+
+            // Connect button(s) to drawer(s)
+            var sidebarToggle = document.querySelectorAll('[data-toggle="sidebar"]')
+            sidebarToggle = Array.prototype.slice.call(sidebarToggle)
+
+            sidebarToggle.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+                    var drawer = document.querySelector(selector)
+                    if (drawer) {
+                        drawer.mdkDrawer.toggle()
+                    }
+                })
+            })
+
+            let drawers = document.querySelectorAll('.mdk-drawer')
+            drawers = Array.prototype.slice.call(drawers)
+            drawers.forEach((drawer) => {
+                drawer.addEventListener('mdk-drawer-change', (e) => {
+                    if (!e.target.mdkDrawer) {
+                        return
+                    }
+                    document.querySelector('body').classList[e.target.mdkDrawer.opened ? 'add' : 'remove']('has-drawer-opened')
+                    let button = document.querySelector('[data-target="#' + e.target.id + '"]')
+                    if (button) {
+                        button.classList[e.target.mdkDrawer.opened ? 'add' : 'remove']('active')
+                    }
+                })
+            })
+
+            // SIDEBAR COLLAPSE MENUS
+            $('.sidebar .collapse').on('show.bs.collapse', function(e) {
+                e.stopPropagation()
+                var parent = $(this).parents('.sidebar-submenu').get(0) || $(this).parents('.sidebar-menu').get(0)
+                $(parent).find('.open').find('.collapse').collapse('hide');
+                $(this).closest('li').addClass('open');
+            });
+            $('.sidebar .collapse').on('hidden.bs.collapse', function(e) {
+                e.stopPropagation()
+                $(this).closest('li').removeClass('open');
+            });
+
+            // ENABLE TOOLTIPS
+            $('[data-toggle="tooltip"]').tooltip()
+
+            // PRELOADER
+            window.addEventListener('load', function() {
+                $('.preloader').fadeOut()
+                domFactory.handler.upgradeAll()
+            })
+
+        })()
+    </script>
+
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
+
+
+
+
+
+</body>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/toastr.js"></script>
+
+
+<script>
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            console.log(email + " logged in")
+            window.location.href = "home.html";
+        } else {
+            console.log("signed out")
+                //window.location.href = "index.html";
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bern</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+    <!-- Simplebar -->
+    <link type="text/css" href="assets/vendor/simplebar.min.css" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" href="assets/css/vendor-material-icons.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-material-icons.rtl.css" rel="stylesheet">
+
+    <!-- Font Awesome FREE Icons -->
+    <link type="text/css" href="assets/css/vendor-fontawesome-free.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-fontawesome-free.rtl.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/toastr.css">
+
+
+
+    <!-- Flatpickr -->
+    <link type="text/css" href="assets/css/vendor-flatpickr.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr.rtl.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.css" rel="stylesheet">
+    <link type="text/css" href="assets/css/vendor-flatpickr-airbnb.rtl.css" rel="stylesheet">
+
+    <!--Kendo-->
+    <link href="css/kendo.default.min.css" rel="stylesheet" />
+    <link href="css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="css/kendo.common.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="layout-default">
+
+
+
+    <div class="preloader"></div>
+
+    <!-- Header Layout -->
+    <div class="mdk-header-layout js-mdk-header-layout">
+
+        <!-- Header -->
+
+        <div id="header" class="mdk-header js-mdk-header m-0" data-fixed>
+            <div class="mdk-header__content">
+
+                <div class="navbar navbar-expand-sm navbar-main navbar-dark bg-dark  pr-0" id="navbar" data-primary>
+                    <div class="container-fluid p-0">
+
+                        <!-- Navbar toggler -->
+
+                        <button class="navbar-toggler navbar-toggler-right d-block d-md-none" type="button" data-toggle="sidebar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+
+                        <!-- Navbar Brand -->
+                        <a href="index.html" class="navbar-brand ">
+                            <img class="navbar-brand-icon" src="assets/images/stack-logo-white.svg" width="22" alt="Stack">
+                            <span>Akwaaba Evolution</span>
+                        </a>
+
+
+
+
+
+
+
+                        <ul class="nav navbar-nav ml-auto d-none d-md-flex">
+
+                            <li class="nav-item dropdown">
+                                <a href="#notifications_menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                    <i class="material-icons nav-icon navbar-notifications-indicator">notifications</i>
+                                </a>
+                                <div id="notifications_menu" class="dropdown-menu dropdown-menu-right navbar-notifications-menu">
+                                    <div class="dropdown-item d-flex align-items-center py-2">
+                                        <span class="flex navbar-notifications-menu__title m-0">Notifications</span>
+                                        <a href="javascript:void(0)" class="text-muted"><small>Clear all</small></a>
+                                    </div>
+                                    <div class="navbar-notifications-menu__content" data-simplebar>
+                                        <div class="py-2">
+
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <div class="avatar avatar-sm" style="width: 32px; height: 32px;">
+                                                        <img src="assets/images/256_daniel-gaffey-1060698-unsplash.jpg" alt="Avatar" class="avatar-img rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <a href="">A.Demian</a> left a comment on <a href="">Akwaaba</a><br>
+                                                    <small class="text-muted">1 minute ago</small>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <a href="#">
+                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title bg-purple rounded-circle"><i class="material-icons icon-16pt">person_add</i></span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="flex">
+                                                    New user <a href="#">Peter Parker</a> signed up.<br>
+                                                    <small class="text-muted">1 hour ago</small>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-item d-flex">
+                                                <div class="mr-3">
+                                                    <a href="#">
+                                                        <div class="avatar avatar-xs" style="width: 32px; height: 32px;">
+                                                            <span class="avatar-title rounded-circle">JD</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="flex">
+                                                    <a href="#">Big Joe</a> <small class="text-muted">wrote:</small><br>
+                                                    <div>Hey, how are you? What about our next meeting</div>
+                                                    <small class="text-muted">2 minutes ago</small>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0);" class="dropdown-item text-center navbar-notifications-menu__footer">View All</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav d-none d-sm-flex border-left navbar-height align-items-center">
+                            <li class="nav-item dropdown">
+                                <a href="#account_menu" class="nav-link dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                                    <img id='pic' src="assets/images/avatar/demi.jpg" class="rounded-circle" width="32" alt="Frontted">
+                                    <span class="ml-1 d-flex-inline">
+                                        <span class="text-light" id='uname'>Username</span>
+                                    </span>
+                                </a>
+                                <div id="account_menu" class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-item-text dropdown-item-text--lh">
+                                        <div><strong id='displayName3'> </strong></div>
+                                        <div id='emailDisplay2'></div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="index.html">Dashboard</a>
+                                    <a class="dropdown-item" href="profile.html">My profile</a>
+                                    <a class="dropdown-item" href="edit-account.html">Edit account</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" id="logoutTwo">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- // END Header -->
+
+        <!-- Header Layout Content -->
+        <div class="mdk-header-layout__content">
+
+            <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+                <div class="mdk-drawer-layout__content page">
+
+
+                    <div class="container-fluid page__heading-container">
+                        <div class="page__heading d-flex align-items-center">
+                            <div class="flex">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb mb-0">
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Rainbow Munchies</li>
+                                    </ol>
+                                </nav>
+                                <h1 class="m-0">Bern</h1>
+                            </div>
+                            <a href="https://bowmunch.com" class="btn btn-success ml-3">Go to Website</a>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid page__container">
+                        <div class="row card-group-row">
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted mb-2 d-flex">Total Income <span class="badge badge-warning ml-2">expected</span></div>
+                                            <span id="totalBill" class="h4 m-0">&dollar; <small class="text-muted"> </small> </span>
+                                        </div>
+                                        <div><i class="material-icons icon-muted icon-40pt ml-3">monetization_on</i></div>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted d-flex mb-2">Pending Orders </div>
+                                            <span id='totalOrders' class="h4 m-0">0 </span>
+                                        </div>
+                                        <div><i id="view-orders" class="material-icons icon-muted icon-40pt ml-3">room_service</i></div>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted d-flex mb-2">Completed Orders </div>
+                                            <span id='completedOrders' class="h4 m-0">0 </span>
+                                        </div>
+                                        <div><i id="viewBackup" class="material-icons icon-muted icon-40pt ml-3">restaurant_menu</i></div>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted d-flex mb-2">Total Packages </div>
+                                            <span id='totalPackages' class="h4 m-0">0 </span>
+                                        </div>
+                                        <div><i class="material-icons icon-muted icon-40pt ml-3">room_service</i></div>
+                                    </div>
+                                    <div class="progress" style="height: 3px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted mb-2">Accrued Income over Time</div>
+
+                                            <div class="d-flex align-items-center">
+                                                <div id="accrued" class="h4 m-0">&dollar; </div>
+                                                <div class="progress ml-1" style="width:100%;height: 3px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div><i class="material-icons icon-muted icon-40pt ml-3">contacts</i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 card-group-row__col">
+                                <div class="card card-group-row__card">
+                                    <div class="card-body-x-lg card-body d-flex flex-row align-items-center">
+                                        <div class="flex">
+                                            <div class="card-header__title text-muted mb-2">Enquiries</div>
+
+                                            <div class="d-flex align-items-center">
+                                                <div id="Messages" class="h4 m-0"> 0 </div>
+                                                <div class="progress ml-1" style="width:100%;height: 3px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div><i id='mailButt' class="material-icons icon-muted icon-40pt ml-3">mail</i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                        <div class="card" id="ordersCard">
+                            <div class="card-header">
+                                <h3><i class="material-icons icon-muted  ml-3">room_service</i> Pending Orders
+                                    <div style="float: right;">
+                                        <a id="printOrders" class="btn btn-success ">Print PDF <i style = "color:white" class="material-icons  ml-3">print</i></a>
+                                        <a id="clearOrdersView" class="btn btn-warning ">Clear<i style = "color:white"class="material-icons   ml-3">clear</i></a>
+                                    </div>
+                                </h3>
+                            </div>
+
+
+
+                            <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+
+
+                                <center>
+                                    <div id='bodyLoader' class="loader loader-primary"></div>
+                                </center>
+                                <table id='munchbowOrdersTable' class="table mb-0 thead-border-top-0">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Order</th>
+                                            <!-- <th scope="col">Unit Price</th> -->
+                                            <!-- <th scope="col">Quantiity</th> -->
+                                            <!-- <th scope="col">Add-Ons</th> -->
+                                            <!-- <th scope="col">Addon Quantity</th> -->
+                                            <th scope="col">Bill</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Phone</th>
+                                            <!-- <th scope="col">Date</th> -->
+                                            <th scope="col">Action</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list" id="munchbowOrders">
+
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                            <div class="card-body text-right">
+                                <!-- Total Number of Orders: <span class="text-muted"><label id='totalOrders'></label></span> -->
+                            </div>
+
+
+                        </div>
+
+                        <div class="card" id="backupOrdersCard" hidden>
+                            <div class="card-header">
+                                <h3><i class="material-icons icon-muted  ml-3">room_service</i> Completed Orders
+                                    <div style="float: right;">
+                                        <!-- <a id="printOrders" class="btn btn-success ">Print PDF <i style = "color:white" class="material-icons  ml-3">print</i></a>
+                                        <a id="clearOrdersView" class="btn btn-warning ">Clear<i style = "color:white"class="material-icons   ml-3">clear</i></a> -->
+                                    </div>
+                                </h3>
+                            </div>
+
+                            <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
+
+
+                                <center>
+                                    <div id='bodyLoader2' class="loader loader-primary"></div>
+                                </center>
+
+                                <table class="table mb-0 thead-border-top-0">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Order</th>
+                                            <!-- <th scope="col">Unit Price</th> -->
+                                            <!-- <th scope="col">Quantiity</th> -->
+                                            <!-- <th scope="col">Add-Ons</th> -->
+                                            <!-- <th scope="col">Addon Quantity</th> -->
+                                            <th scope="col">Bill</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">Date</th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list" id="munchbowOrdersBackup">
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+
+
+                            <div class="card-body text-right">
+                                <!-- Total Number of Orders: <span class="text-muted"><label id='totalOrders'></label></span> -->
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- // END drawer-layout__content -->
+
+                <div class="mdk-drawer  js-mdk-drawer" id="default-drawer" data-align="start">
+                    <div class="mdk-drawer__content">
+                        <div class="sidebar sidebar-light sidebar-left simplebar" data-simplebar>
+                            <div class="d-flex align-items-center sidebar-p-a border-bottom sidebar-account">
+                                <a href="profile.html" class="flex d-flex align-items-center text-underline-0 text-body">
+                                    <span class="avatar mr-3">
+                                        <img id='avatar' src="assets/images/avatar/demi.jpg" alt="avatar" class="avatar-img rounded-circle">
+                                    </span>
+                                    <span class="flex d-flex flex-column">
+                                        <strong id='displayName'>User Name</strong>
+                                        <small class="text-muted text-uppercase">Account Manager</small>
+                                    </span>
+                                </a>
+                                <div class="dropdown ml-auto">
+                                    <a href="#" data-toggle="dropdown" data-caret="false" class="text-muted"><i class="material-icons">more_vert</i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <div class="dropdown-item-text dropdown-item-text--lh">
+                                            <div><strong id='displayName2'> </strong></div>
+                                            <div id='emailDisplay'></div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item active" href="home.html">Dashboard</a>
+                                        <a class="dropdown-item" href="profile.html">My profile</a>
+                                        <a class="dropdown-item" href="edit-account.html">Edit account</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" id='logout'>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-heading sidebar-m-t">Menu</div>
+                            <ul class="sidebar-menu">
+                                <li class="sidebar-menu-item active open">
+                                    <a class="sidebar-menu-button" data-toggle="collapse" href="#dashboards_menu">
+                                        <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+                                        <span class="sidebar-menu-text">Dashboards</span>
+                                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                    </a>
+                                    <ul class="sidebar-submenu collapse show " id="dashboards_menu">
+                                        <li class="sidebar-menu-item active">
+                                            <a class="sidebar-menu-button" href="home.html">
+                                                <span class="sidebar-menu-text" id="homePageLink" hidden>Default</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="bern.html">
+                                                <span class="sidebar-menu-text" id="bernDashboard">Bern's Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <!-- <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button" href="analytics.html">
+                                                <span class="sidebar-menu-text">E-commerce</span>
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // END drawer-layout -->
+
+        </div>
+        <!-- // END header-layout__content -->
+
+    </div>
+    <!-- // END header-layout -->
+
+
+
+    <div id="order-info" class="modal fade show" tabindex="-1" role="dialog" aria-modal="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div id="order-details" class="modal-body text-center p-4">
+                    <i class="material-icons icon-40pt text-info mb-2">room_service</i>
+                    <h4>Order Details</h4>
+                    <p class="mt-3">
+                        <label>Order #: &nbsp;&nbsp;</label> <label style="color:teal" id='customerID'>XXX</label> <br>
+                        <label>Name: &nbsp;&nbsp;</label> <label style="color:teal" id='customerName'>John Doe</label> <br>
+                        <label>Email: &nbsp;&nbsp;</label><label style="color:teal" id='customerEmail'>somemail@gmail.com</label><br>
+                        <label>Phone: &nbsp;&nbsp;</label><label style="color:teal" id='customerPhone'>123456789</label><br>
+                        <label>Order: &nbsp;&nbsp;</label><label style="color:teal" id='customerOrder'></label><br>
+                        <label>Order Date: &nbsp;&nbsp;</label><label style="color:teal" id='customerDate'></label><br>
+                        <label>Pickup Day: &nbsp;&nbsp;</label><label style="color:teal" id='customerPickupDay'></label><br>
+                        <label>Pickup Time: &nbsp;&nbsp;</label><label style="color:teal" id='customerPickupTime'></label><br>
+                        <label>Specifications:&nbsp;&nbsp; </label><label style="color:teal" id='customerSpecs'>None</label>
+                    </p>
+
+                </div>
+                <div class="modal-footer" style="justify-content: center; align-items: center;  ">
+                    <button type="button" class="btn btn-warning my-2" data-dismiss="modal" id='dismissOrderDetails'>Close</button>
+                    <button type="button" class="btn btn-info my-2" data-dismiss="modal" id='printDetails'>Print</button>
+                </div>
+
+                <!-- // END .modal-body -->
+            </div>
+            <!-- // END .modal-content -->
+        </div>
+        <!-- // END .modal-dialog -->
+    </div>
+
+    <!-- Enquiries  Modal -->
+    <div id="modal-enquiries" class="modal fade show" tabindex="-1" role="dialog" aria-modal="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <i class="material-icons icon-40pt text-info mb-2">mail</i>
+                    <h4>Enquiries</h4>
+                    <table class="table mb-0 thead-border-top-0">
+                        <thead>
+                            <tr>
+                                <!-- <th scope="col">ID</th> -->
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Message</th>
+                            </tr>
+                        </thead>
+                        <tbody class="list" id="munchbowEnquiries">
+
+                        </tbody>
+                    </table>
+                    <button type="button" id='dismissMail' class="btn btn-warning my-2" data-dismiss="modal">Close</button>
+                </div>
+                <!-- // END .modal-body -->
+            </div>
+            <!-- // END .modal-content -->
+        </div>
+        <!-- // END .modal-dialog -->
+    </div>
+
+    <!-- Warning Alert Modal -->
+    <div id="modal-complete" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <i class="material-icons icon-40pt text-warning mb-2">warning</i>
+                    <h4>Warning!</h4>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eaque explicabo, itaque iusto unde quas magni non, quae expedita eveniet, incidunt molestiae tempora maiores odit hic perspiciatis. Eveniet, porro illo.</p>
+                    <button type="button" class="btn btn-warning my-2" data-dismiss="modal">Continue</button>
+                </div>
+                <!-- // END .modal-body -->
+            </div>
+            <!-- // END .modal-content -->
+        </div>
+        <!-- // END .modal-dialog -->
+    </div>
+
+    <!-- Warning Alert Modal -->
+    <div id="modal-delete" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center p-4">
+                    <i class="material-icons icon-40pt text-warning mb-2">warning</i>
+                    <h4>Warning!</h4>
+                    <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt eaque explicabo, itaque iusto unde quas magni non, quae expedita eveniet, incidunt molestiae tempora maiores odit hic perspiciatis. Eveniet, porro illo.</p>
+                    <button type="button" class="btn btn-warning my-2" data-dismiss="modal">Continue</button>
+                </div>
+                <!-- // END .modal-body -->
+            </div>
+            <!-- // END .modal-content -->
+        </div>
+        <!-- // END .modal-dialog -->
+    </div>
+    <!-- // END .modal -->
+
+
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap.min.js"></script>
+
+    <!-- Simplebar -->
+    <script src="assets/vendor/simplebar.min.js"></script>
+
+    <!-- DOM Factory -->
+    <script src="assets/vendor/dom-factory.js"></script>
+
+    <!-- MDK -->
+    <script src="assets/vendor/material-design-kit.js"></script>
+
+    <!-- App -->
+    <script src="assets/js/toggle-check-all.js"></script>
+    <script src="assets/js/check-selected-row.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="assets/js/sidebar-mini.js"></script>
+
+
+    <!-- Kendo JS -->
+    <script src="js/kendo.web.min.js"></script>
+    <script src="js/knockout-3.1.0.js"></script>
+    <script src="js/knockout-kendo.min.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+            // Self Initialize DOM Factory Components
+            domFactory.handler.autoInit()
+
+            // Connect button(s) to drawer(s)
+            var sidebarToggle = document.querySelectorAll('[data-toggle="sidebar"]')
+            sidebarToggle = Array.prototype.slice.call(sidebarToggle)
+
+            sidebarToggle.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var selector = e.currentTarget.getAttribute('data-target') || '#default-drawer'
+                    var drawer = document.querySelector(selector)
+                    if (drawer) {
+                        drawer.mdkDrawer.toggle()
+                    }
+                })
+            })
+
+            let drawers = document.querySelectorAll('.mdk-drawer')
+            drawers = Array.prototype.slice.call(drawers)
+            drawers.forEach((drawer) => {
+                drawer.addEventListener('mdk-drawer-change', (e) => {
+                    if (!e.target.mdkDrawer) {
+                        return
+                    }
+                    document.querySelector('body').classList[e.target.mdkDrawer.opened ? 'add' : 'remove']('has-drawer-opened')
+                    let button = document.querySelector('[data-target="#' + e.target.id + '"]')
+                    if (button) {
+                        button.classList[e.target.mdkDrawer.opened ? 'add' : 'remove']('active')
+                    }
+                })
+            })
+
+            // SIDEBAR COLLAPSE MENUS
+            $('.sidebar .collapse').on('show.bs.collapse', function(e) {
+                e.stopPropagation()
+                var parent = $(this).parents('.sidebar-submenu').get(0) || $(this).parents('.sidebar-menu').get(0)
+                    //$(parent).find('.open').find('.collapse').collapse('hide');
+                $(this).closest('li').addClass('open');
+            });
+            $('.sidebar .collapse').on('hidden.bs.collapse', function(e) {
+                e.stopPropagation()
+                $(this).closest('li').removeClass('open');
+            });
+
+            // ENABLE TOOLTIPS
+            $('[data-toggle="tooltip"]').tooltip()
+
+            // PRELOADER
+            window.addEventListener('load', function() {
+                $('.preloader').fadeOut()
+                domFactory.handler.upgradeAll()
+            })
+
+        })()
+    </script>
+
+    <!-- App Settings (safe to remove) -->
+    <script src="assets/js/app-settings.js"></script>
+
+
+
+    <!-- Flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+
+    <!-- Global Settings -->
+
+
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/bern.js"></script>
+<script src="PrintPDF/js/kendo.all.min.js"></script>
+<script src="PrintPDF/js/pako_deflate.min.js"></script>
+<script src="js/toastr.js"></script>
+
+</html>
